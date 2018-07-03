@@ -15,7 +15,7 @@ export default withData(UserInfo)
 
 function UserInfo({ location, userInfo, user, onLogout }) {
 	let showLogout =
-		location.pathname.startsWith('/user') &&
+		location.pathname.indexOf('/user') === 0 &&
 		userInfo &&
 		user &&
 		userInfo.loginname === user.loginname
